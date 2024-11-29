@@ -1,0 +1,180 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/tok.css' %}">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid " style="background-color:lightslategray">
+      <a class="navbar-brand" href="#"><img src="/static/tatoo.1.jpg" alt="" height="50px" width="60px"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'home' %}" id="wolks">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'about' %}" id="wolks">About</a>
+          </li>
+          <li class="nav-item"></li>
+          <a class="nav-link" href="{% url 'menu' %}" id="wolks">Menu</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="{% url 'off' %}" id="wolks" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Offer
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">40% off order Above 500rs</a></li>
+              <li><a class="dropdown-item" href="#">30% off order Above 400rs</a></li>
+              <li>
+                <hr class="dropdown-divider"> 20% off ordeer Above 300 rs
+              </li>
+              <li><a class="dropdown-item" href="#">10% off order Above 200rs</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'contact' %}" id="wolks">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'blog' %}" id="wolks">Blogs</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  
+ 
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/static/tr4.jpg" class="d-block w-100" alt="..." style="height: 600px; object-fit: cover;">
+            <div class="carousel-caption d-none d-md-block" style="bottom: 15%; background-color: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px;">
+              <h1 class="text-warning" style="font-family: 'Playfair Display', serif;">For Booking  purpose and Order For Any Event or Party</h1>
+              <h1 class="text-warning" style="font-family: 'Playfair Display', serif;">Get in Touch</h1>
+              <p class="text-white" style="font-size: 18px;">Contact us for reservations, feedback, or any other inquiry.Our toll free no-1800-7654-9087</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      
+      <!-- Contact Form -->
+      <section class="contact-form" style="padding: 50px; background-color: #f0f0f0;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="text-center">Contact Us</h2>
+              <p class="text-center">Please fill out the form below to get in touch with us.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <form>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name:</label>
+                  <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                  <label for="mobile" class="form-label">Mobile Number:</label>
+                  <input type="tel" class="form-control" id="mobile" required>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email ID:</label>
+                  <input type="email" class="form-control" id="email" required>
+                </div>
+              </form>
+            </div>
+            <div class="col-md-6">
+              <form>
+                <div class="mb-3">
+                  <label for="query" class="form-label">Query/Issue:</label>
+                  <textarea class="form-control" id="query" rows="5" required></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="preferred-time" class="form-label">Preferred Time to Contact:</label>
+                  <select class="form-select" id="preferred-time" required>
+                    <option value="">Select</option>
+                    <option value="morning">Morning (9am-12pm)</option>
+                    <option value="afternoon">Afternoon (12pm-5pm)</option>
+                    <option value="evening">Evening (5pm-9pm)</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-warning">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+   <!-- Footer -->
+<div class="container-fluid" style="background-color: #333; color: #fff; padding: 2em;">
+    <div class="row">
+        <div class="col-md-3">
+            <h4>ABOUT</h4>
+            <ul>
+                <li><a href="" style="color: #fff;">About us Overview</a></li>
+                <li><a href="" style="color: #fff;">Franchising Info</a></li>
+                <li><a href="" style="color: #fff;">Values in Action</a></li>
+                <li><a href="" style="color: #fff;">Investors Relation</a></li>
+                <li><a href="" style="color: #fff;">News and Notification</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h4>SERVICES</h4>
+            <ul>
+                <li><a href="" style="color: #fff;">Services Overview</a></li>
+                <li><a href="" style="color: #fff;">Delivery Partner</a></li>
+                <li><a href="" style="color: #fff;">Play Places and Parties</a></li>
+                <li><a href="" style="color: #fff;">Food Hub Merchandise</a></li>
+                <li><a href="" style="color: #fff;">Mobile Order & Pay</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h4>COMMUNITY</h4>
+            <ul>
+                <li><a href="" style="color: #fff;">Community Overview</a></li>
+                <li><a href="" style="color: #fff;">Now Serving</a></li>
+                <li><a href="" style="color: #fff;">Hacer@ Scholarship for Hispanic Students</a></li>
+                <li><a href="" style="color: #fff;">Black and Positively Golden</a></li>
+                <li><a href="" style="color: #fff;">Food Hub Asian Pacific American</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h4>CONTACT US</h4>
+            <ul>
+                <li><a href="" style="color: #fff;">Contact Us Overview</a></li>
+                <li><a href="" style="color: #fff;">Gift Card FAQs</a></li>
+                <li><a href="" style="color: #fff;">Donation</a></li>
+                <li><a href="" style="color: #fff;">Employment</a></li>
+                <li><a href="" style="color: #fff;">Customer Feedback</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row" style="background-color: #444; padding: 1em; text-align: center;">
+        <p>&copy; 2024 Food Hub. All Rights Under Paultech.</p>
+    </div>
+</div>

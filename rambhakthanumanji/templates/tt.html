@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Food Hub</title>
+    <link href="(link unavailable)" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/tok.css' %}">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .navbar-brand img {
+            border-radius: 50%;
+        }
+        .carousel-caption {
+            top: 20%;
+            animation: slideIn 1s;
+        }
+        @keyframes slideIn {
+            from {
+                top: -100px;
+            }
+            to {
+                top: 20%;
+            }
+        }
+        .card {
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.1);
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 2em;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid" style="background-color: lightslategray">
+            <a class="navbar-brand" href="#"><img src="/static/tatoo.1.jpg" alt="" height="50px" width="60px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}" id="wolks">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about' %}" id="wolks">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'menu' %}" id="wolks">Menu</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="{% url 'off' %}" id="wolks" role="button" data-bs-toggle="dropdown" aria-expanded="false">Offer</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">40% off order Above 500rs</a></li>
+                            <li><a class="dropdown-item" href="#">30% off order Above 400rs</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">20% off order Above 300rs</a></li>
+                            <li><a class="dropdown-item" href="#">10% off order Above 200rs</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'contact' %}" id="wolks">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel -->
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/static/new food1.webp" class="d-block w-100" alt="..." style="height: 660px">
+                <div class="carousel-caption d-none d-md-block" style="padding: 250px">
+                    <h1>Delicious Food with Taste</h1>
+                    <p>Try the New Food with New Taste.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/static/new food 2.jpg" class="d-block w

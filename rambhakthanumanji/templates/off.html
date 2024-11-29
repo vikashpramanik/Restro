@@ -1,0 +1,412 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/tok.css' %}">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid " style="background-color:lightslategray">
+      <a class="navbar-brand" href="#"><img src="/static/tatoo.1.jpg" alt="" height="50px" width="60px"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'home' %}" id="wolks">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'about' %}" id="wolks">About</a>
+          </li>
+          <li class="nav-item"></li>
+          <a class="nav-link" href="{% url 'menu' %}" id="wolks">Menu</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="{% url 'off' %}" id="wolks" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Offer
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">40% off order Above 500rs</a></li>
+              <li><a class="dropdown-item" href="#">30% off order Above 400rs</a></li>
+              <li>
+                <hr class="dropdown-divider"> 20% off ordeer Above 300 rs
+              </li>
+              <li><a class="dropdown-item" href="#">10% off order Above 200rs</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'contact' %}" id="wolks">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'blog' %}" id="wolks">Blogs</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  
+    
+ 
+    <!-- Food Offers Section -->
+<section class="offers" style="background-color: #f0f0f0; padding: 50px;">
+    <h1 class="text-center" style="font-family: 'Playfair Display', serif; font-size: 48px; color: #333; text-decoration: underline;">FOOD OFFERS WITH 20%off</h1>
+    <div class="container">
+      <div class="row" style="margin-top: 30px; justify-content: center;">
+        
+        <!-- 20% Off Offer -->
+        <div class="col-md-4">
+          <div class="card" style="border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <img src="/static/21.jpg" class="card-img-top" alt="..." style="border-top-left-radius: 10px; border-top-right-radius: 10px; height: 200px; object-fit: cover;">
+            <div class="card-body" style="padding: 20px;">
+              <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 600; color: #333;">20% Off All Pizzas</h5>
+              <p class="card-text" style="font-family: 'Lato', sans-serif; font-size: 16px; color: #666;">Use code PIZZA20 at checkout.</p>
+              <button class="btn btn-primary" style="font-family: 'Montserrat', sans-serif; font-size: 16px; padding: 10px 20px; border-radius: 5px;">Order Now</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 30% Off Offer -->
+        <div class="col-md-4">
+          <div class="card" style="border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <img src="/static/22.jfif" class="card-img-top" alt="..." style="border-top-left-radius: 10px; border-top-right-radius: 10px; height: 200px; object-fit: cover;">
+            <div class="card-body" style="padding: 20px;">
+              <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 600; color: #333;">30% Off All Burgers</h5>
+              <p class="card-text" style="font-family: 'Lato', sans-serif; font-size: 16px; color: #666;">Use code BURGER30 at checkout.</p>
+              <button class="btn btn-primary" style="font-family: 'Montserrat', sans-serif; font-size: 16px; padding: 10px 20px; border-radius: 5px;">Order Now</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 50% Off Offer -->
+        <div class="col-md-4">
+          <div class="card" style="border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <img src="/static/23.jfif" class="card-img-top" alt="..." style="border-top-left-radius: 10px; border-top-right-radius: 10px; height: 200px; object-fit: cover;">
+            <div class="card-body" style="padding: 20px;">
+              <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 600; color: #333;">50% Off All Combos</h5>
+              <p class="card-text" style="font-family: 'Lato', sans-serif; font-size: 16px; color: #666;">Use code COMBO50 at checkout.</p>
+              <button class="btn btn-primary" style="font-family: 'Montserrat', sans-serif; font-size: 16px; padding: 10px 20px; border-radius: 5px;">Order Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- Food Offers Section -->
+<section class="offers" style="background-color: #f0f0f0; padding: 50px;">
+    <div class="container">
+      <div class="row" style="margin-top: 30px; justify-content: center;">
+        
+        <!-- 20% Off Offer -->
+        <div class="col-md-4">
+          <div class="card" style="border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <img src="/static/24.jfif" class="card-img-top" alt="..." style="border-top-left-radius: 10px; border-top-right-radius: 10px; height: 200px; object-fit: cover;">
+            <div class="card-body" style="padding: 20px;">
+              <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 600; color: #333;">20% Off All Pizzas</h5>
+              <p class="card-text" style="font-family: 'Lato', sans-serif; font-size: 16px; color: #666;">Use code PIZZA20 at checkout.</p>
+              <button class="btn btn-primary" style="font-family: 'Montserrat', sans-serif; font-size: 16px; padding: 10px 20px; border-radius: 5px;">Order Now</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 30% Off Offer -->
+        <div class="col-md-4">
+          <div class="card" style="border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <img src="/static/25.jfif" class="card-img-top" alt="..." style="border-top-left-radius: 10px; border-top-right-radius: 10px; height: 200px; object-fit: cover;">
+            <div class="card-body" style="padding: 20px;">
+              <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 600; color: #333;">30% Off All Burgers</h5>
+              <p class="card-text" style="font-family: 'Lato', sans-serif; font-size: 16px; color: #666;">Use code BURGER30 at checkout.</p>
+              <button class="btn btn-primary" style="font-family: 'Montserrat', sans-serif; font-size: 16px; padding: 10px 20px; border-radius: 5px;">Order Now</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 50% Off Offer -->
+        <div class="col-md-4">
+          <div class="card" style="border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <img src="/static/26.jpeg" class="card-img-top" alt="..." style="border-top-left-radius: 10px; border-top-right-radius: 10px; height: 200px; object-fit: cover;">
+            <div class="card-body" style="padding: 20px;">
+              <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 600; color: #333;">50% Off All Combos</h5>
+              <p class="card-text" style="font-family: 'Lato', sans-serif; font-size: 16px; color: #666;">Use code COMBO50 at checkout.</p>
+              <button class="btn btn-primary" style="font-family: 'Montserrat', sans-serif; font-size: 16px; padding: 10px 20px; border-radius: 5px;">Order Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- Food Offers Section -->
+<section class="offers" style="background-color: #f0f0f0; padding: 50px;">
+    <h1 class="text-center" style="font-family: 'Playfair Display', serif; font-size: 48px; color: #333; text-decoration: underline;">FOOD OFFERS WITH 30% OFF</h1>
+    <div class="container">
+      <div class="row" style="margin-top: 30px; justify-content: center;">
+        
+        <!-- 20% Off Offer -->
+        <div class="col-md-4">
+          <div class="card" style="border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <img src="/static/27.jfif" class="card-img-top" alt="..." style="border-top-left-radius: 10px; border-top-right-radius: 10px; height: 200px; object-fit: cover;">
+            <div class="card-body" style="padding: 20px;">
+              <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 600; color: #333;">20% Off All Pizzas</h5>
+              <p class="card-text" style="font-family: 'Lato', sans-serif; font-size: 16px; color: #666;">Use code PIZZA20 at checkout.</p>
+              <button class="btn btn-primary" style="font-family: 'Montserrat', sans-serif; font-size: 16px; padding: 10px 20px; border-radius: 5px;">Order Now</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 30% Off Offer -->
+        <div class="col-md-4">
+          <div class="card" style="border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <img src="/static/28.jfif" class="card-img-top" alt="..." style="border-top-left-radius: 10px; border-top-right-radius: 10px; height: 200px; object-fit: cover;">
+            <div class="card-body" style="padding: 20px;">
+              <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 600; color: #333;">30% Off All Burgers</h5>
+              <p class="card-text" style="font-family: 'Lato', sans-serif; font-size: 16px; color: #666;">Use code BURGER30 at checkout.</p>
+              <button class="btn btn-primary" style="font-family: 'Montserrat', sans-serif; font-size: 16px; padding: 10px 20px; border-radius: 5px;">Order Now</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 50% Off Offer -->
+        <div class="col-md-4">
+          <div class="card" style="border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <img src="/static/29.avif" class="card-img-top" alt="..." style="border-top-left-radius: 10px; border-top-right-radius: 10px; height: 200px; object-fit: cover;">
+            <div class="card-body" style="padding: 20px;">
+              <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 600; color: #333;">50% Off All Combos</h5>
+              <p class="card-text" style="font-family: 'Lato', sans-serif; font-size: 16px; color: #666;">Use code COMBO50 at checkout.</p>
+              <button class="btn btn-primary" style="font-family: 'Montserrat', sans-serif; font-size: 16px; padding: 10px 20px; border-radius: 5px;">Order Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- Food Offers Section -->
+<section class="offers" style="background-color: #f0f0f0; padding: 50px;">
+    <div class="container">
+      <div class="row" style="margin-top: 30px; justify-content: center;">
+        
+        <!-- 20% Off Offer -->
+        <div class="col-md-4">
+          <div class="card" style="border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <img src="/static/30.jfif" class="card-img-top" alt="..." style="border-top-left-radius: 10px; border-top-right-radius: 10px; height: 200px; object-fit: cover;">
+            <div class="card-body" style="padding: 20px;">
+              <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 600; color: #333;">20% Off All Pizzas</h5>
+              <p class="card-text" style="font-family: 'Lato', sans-serif; font-size: 16px; color: #666;">Use code PIZZA20 at checkout.</p>
+              <button class="btn btn-primary" style="font-family: 'Montserrat', sans-serif; font-size: 16px; padding: 10px 20px; border-radius: 5px;">Order Now</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 30% Off Offer -->
+        <div class="col-md-4">
+          <div class="card" style="border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <img src="/static/31.jfif" class="card-img-top" alt="..." style="border-top-left-radius: 10px; border-top-right-radius: 10px; height: 200px; object-fit: cover;">
+            <div class="card-body" style="padding: 20px;">
+              <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 600; color: #333;">30% Off All Burgers</h5>
+              <p class="card-text" style="font-family: 'Lato', sans-serif; font-size: 16px; color: #666;">Use code BURGER30 at checkout.</p>
+              <button class="btn btn-primary" style="font-family: 'Montserrat', sans-serif; font-size: 16px; padding: 10px 20px; border-radius: 5px;">Order Now</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 50% Off Offer -->
+        <div class="col-md-4">
+          <div class="card" style="border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <img src="/static/32.jpg" class="card-img-top" alt="..." style="border-top-left-radius: 10px; border-top-right-radius: 10px; height: 200px; object-fit: cover;">
+            <div class="card-body" style="padding: 20px;">
+              <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 600; color: #333;">50% Off All Combos</h5>
+              <p class="card-text" style="font-family: 'Lato', sans-serif; font-size: 16px; color: #666;">Use code COMBO50 at checkout.</p>
+              <button class="btn btn-primary" style="font-family: 'Montserrat', sans-serif; font-size: 16px; padding: 10px 20px; border-radius: 5px;">Order Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+    <!-- Food Offers Section -->
+<section class="offers" style="background-color: #f0f0f0; padding: 50px;">
+    <div class="container">
+      <div class="row" style="margin-top: 30px; justify-content: center;">
+        
+        <!-- 20% Off Offer -->
+        <div class="col-md-4">
+          <div class="card" style="border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <img src="/static/33.jpg" class="card-img-top" alt="..." style="border-top-left-radius: 10px; border-top-right-radius: 10px; height: 200px; object-fit: cover;">
+            <div class="card-body" style="padding: 20px;">
+              <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 600; color: #333;">20% Off All Pizzas</h5>
+              <p class="card-text" style="font-family: 'Lato', sans-serif; font-size: 16px; color: #666;">Use code PIZZA20 at checkout.</p>
+              <button class="btn btn-primary" style="font-family: 'Montserrat', sans-serif; font-size: 16px; padding: 10px 20px; border-radius: 5px;">Order Now</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 30% Off Offer -->
+        <div class="col-md-4">
+          <div class="card" style="border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <img src="/static/34.jfif" class="card-img-top" alt="..." style="border-top-left-radius: 10px; border-top-right-radius: 10px; height: 200px; object-fit: cover;">
+            <div class="card-body" style="padding: 20px;">
+              <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 600; color: #333;">30% Off All Burgers</h5>
+              <p class="card-text" style="font-family: 'Lato', sans-serif; font-size: 16px; color: #666;">Use code BURGER30 at checkout.</p>
+              <button class="btn btn-primary" style="font-family: 'Montserrat', sans-serif; font-size: 16px; padding: 10px 20px; border-radius: 5px;">Order Now</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 50% Off Offer -->
+        <div class="col-md-4">
+          <div class="card" style="border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <img src="/static/35.jfif" class="card-img-top" alt="..." style="border-top-left-radius: 10px; border-top-right-radius: 10px; height: 200px; object-fit: cover;">
+            <div class="card-body" style="padding: 20px;">
+              <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 600; color: #333;">50% Off All Combos</h5>
+              <p class="card-text" style="font-family: 'Lato', sans-serif; font-size: 16px; color: #666;">Use code COMBO50 at checkout.</p>
+              <button class="btn btn-primary" style="font-family: 'Montserrat', sans-serif; font-size: 16px; padding: 10px 20px; border-radius: 5px;">Order Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Food Offers Section -->
+<section class="offers" style="background-color: #f0f0f0; padding: 50px;">
+    <h1 class="text-center" style="font-family: 'Playfair Display', serif; font-size: 48px; color: #333; text-decoration: underline;">FOOD OFFERS WITH 50% OFF</h1>
+    <div class="container">
+      <div class="row" style="margin-top: 30px; justify-content: center;">
+        
+        <!-- 20% Off Offer -->
+        <div class="col-md-4">
+          <div class="card" style="border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <img src="/static/36.jfif" class="card-img-top" alt="..." style="border-top-left-radius: 10px; border-top-right-radius: 10px; height: 200px; object-fit: cover;">
+            <div class="card-body" style="padding: 20px;">
+              <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 600; color: #333;">20% Off All Pizzas</h5>
+              <p class="card-text" style="font-family: 'Lato', sans-serif; font-size: 16px; color: #666;">Use code PIZZA20 at checkout.</p>
+              <button class="btn btn-primary" style="font-family: 'Montserrat', sans-serif; font-size: 16px; padding: 10px 20px; border-radius: 5px;">Order Now</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 30% Off Offer -->
+        <div class="col-md-4">
+          <div class="card" style="border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <img src="/static/37.jfif" class="card-img-top" alt="..." style="border-top-left-radius: 10px; border-top-right-radius: 10px; height: 200px; object-fit: cover;">
+            <div class="card-body" style="padding: 20px;">
+              <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 600; color: #333;">30% Off All Burgers</h5>
+              <p class="card-text" style="font-family: 'Lato', sans-serif; font-size: 16px; color: #666;">Use code BURGER30 at checkout.</p>
+              <button class="btn btn-primary" style="font-family: 'Montserrat', sans-serif; font-size: 16px; padding: 10px 20px; border-radius: 5px;">Order Now</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 50% Off Offer -->
+        <div class="col-md-4">
+          <div class="card" style="border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <img src="/static/38.jpg" class="card-img-top" alt="..." style="border-top-left-radius: 10px; border-top-right-radius: 10px; height: 200px; object-fit: cover;">
+            <div class="card-body" style="padding: 20px;">
+              <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 600; color: #333;">50% Off All Combos</h5>
+              <p class="card-text" style="font-family: 'Lato', sans-serif; font-size: 16px; color: #666;">Use code COMBO50 at checkout.</p>
+              <button class="btn btn-primary" style="font-family: 'Montserrat', sans-serif; font-size: 16px; padding: 10px 20px; border-radius: 5px;">Order Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Food Offers Section -->
+<section class="offers" style="background-color: #f0f0f0; padding: 50px;">
+    <div class="container">
+      <div class="row" style="margin-top: 30px; justify-content: center;">
+        
+        <!-- 20% Off Offer -->
+        <div class="col-md-4">
+          <div class="card" style="border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <img src="/static/39.jfif" class="card-img-top" alt="..." style="border-top-left-radius: 10px; border-top-right-radius: 10px; height: 200px; object-fit: cover;">
+            <div class="card-body" style="padding: 20px;">
+              <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 600; color: #333;">20% Off All Pizzas</h5>
+              <p class="card-text" style="font-family: 'Lato', sans-serif; font-size: 16px; color: #666;">Use code PIZZA20 at checkout.</p>
+              <button class="btn btn-primary" style="font-family: 'Montserrat', sans-serif; font-size: 16px; padding: 10px 20px; border-radius: 5px;">Order Now</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 30% Off Offer -->
+        <div class="col-md-4">
+          <div class="card" style="border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <img src="/static/40.jfif" class="card-img-top" alt="..." style="border-top-left-radius: 10px; border-top-right-radius: 10px; height: 200px; object-fit: cover;">
+            <div class="card-body" style="padding: 20px;">
+              <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 600; color: #333;">30% Off All Burgers</h5>
+              <p class="card-text" style="font-family: 'Lato', sans-serif; font-size: 16px; color: #666;">Use code BURGER30 at checkout.</p>
+              <button class="btn btn-primary" style="font-family: 'Montserrat', sans-serif; font-size: 16px; padding: 10px 20px; border-radius: 5px;">Order Now</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 50% Off Offer -->
+        <div class="col-md-4">
+          <div class="card" style="border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <img src="/static/41.jfif" class="card-img-top" alt="..." style="border-top-left-radius: 10px; border-top-right-radius: 10px; height: 200px; object-fit: cover;">
+            <div class="card-body" style="padding: 20px;">
+              <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 600; color: #333;">50% Off All Combos</h5>
+              <p class="card-text" style="font-family: 'Lato', sans-serif; font-size: 16px; color: #666;">Use code COMBO50 at checkout.</p>
+              <button class="btn btn-primary" style="font-family: 'Montserrat', sans-serif; font-size: 16px; padding: 10px 20px; border-radius: 5px;">Order Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Food Offers Section -->
+<section class="offers" style="background-color: #f0f0f0; padding: 50px;">
+    <div class="container">
+      <div class="row" style="margin-top: 30px; justify-content: center;">
+        
+        <!-- 20% Off Offer -->
+        <div class="col-md-4">
+          <div class="card" style="border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <img src="/static/42.jpg" class="card-img-top" alt="..." style="border-top-left-radius: 10px; border-top-right-radius: 10px; height: 200px; object-fit: cover;">
+            <div class="card-body" style="padding: 20px;">
+              <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 600; color: #333;">20% Off All Pizzas</h5>
+              <p class="card-text" style="font-family: 'Lato', sans-serif; font-size: 16px; color: #666;">Use code PIZZA20 at checkout.</p>
+              <button class="btn btn-primary" style="font-family: 'Montserrat', sans-serif; font-size: 16px; padding: 10px 20px; border-radius: 5px;">Order Now</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 30% Off Offer -->
+        <div class="col-md-4">
+          <div class="card" style="border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <img src="/static/43.jfif" class="card-img-top" alt="..." style="border-top-left-radius: 10px; border-top-right-radius: 10px; height: 200px; object-fit: cover;">
+            <div class="card-body" style="padding: 20px;">
+              <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 600; color: #333;">30% Off All Burgers</h5>
+              <p class="card-text" style="font-family: 'Lato', sans-serif; font-size: 16px; color: #666;">Use code BURGER30 at checkout.</p>
+              <button class="btn btn-primary" style="font-family: 'Montserrat', sans-serif; font-size: 16px; padding: 10px 20px; border-radius: 5px;">Order Now</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 50% Off Offer -->
+        <div class="col-md-4">
+          <div class="card" style="border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <img src="/static/44.jfif" class="card-img-top" alt="..." style="border-top-left-radius: 10px; border-top-right-radius: 10px; height: 200px; object-fit: cover;">
+            <div class="card-body" style="padding: 20px;">
+              <h5 class="card-title" style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 600; color: #333;">50% Off All Combos</h5>
+              <p class="card-text" style="font-family: 'Lato', sans-serif; font-size: 16px; color: #666;">Use code COMBO50 at checkout.</p>
+              <button class="btn btn-primary" style="font-family: 'Montserrat', sans-serif; font-size: 16px; padding: 10px 20px; border-radius: 5px;">Order Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

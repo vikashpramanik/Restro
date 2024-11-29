@@ -1,0 +1,19 @@
+.lex{
+    background-image:url(banner3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 250px;
+    color: whitesmoke;
+}
+#wolks:hover{
+background-color:lightgoldenrodyellow;
+}
+.containerfluid
+{
+  background-color: aqua;  
+}
+.col-md-3
+{
+font-family: 'Times New Roman', Times, serif;
+}
